@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Readme</title>
+
+	<style>
+
+		/* styles to make the readme a bit easier on the eyes... thanks for your time and the opportunity */
+		
+
+		body {
+			background-color: #e7e7e7;
+			padding: 3rem;
+			font-family: 'helvetica neue', helvetica;
+		}
+
+		h2 {
+			margin: 0;
+		}
+		p, li {
+			line-height: 1.5;
+		}
+
+		li {
+			margin-bottom: .5rem;
+		}
+
+		.main {
+			max-width: 48em;
+			margin: 0 auto;
+		}
+
+		a:not(.btn){
+			color: gray;
+		}
+
+		a.btn {
+			margin-top: 1rem;
+			display: inline-block;
+			text-decoration: none;
+			padding: 2em 3em;
+			border: 1px solid #222222;
+			color: #222222;
+			-webkit-transition: all .2s;
+			   -moz-transition: all .2s;
+			    -ms-transition: all .2s;
+			     -o-transition: all .2s;
+			        transition: all .2s;
+			font-weight: bold;
+		}
+
+		@media screen and (min-width: 1030px) {
+			a.btn:hover {
+				background-color: #222222;
+				color: white;
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="main">
+		
+
+		<h1>Modular Case Study Template for a WordPress Theme</h1>
+
+		<p>This project was a portfolio site for a designer friend named <a href="http://oatemeal.co">John Oates</a>. The files here are related to a heavily customizable, modular, content managed case study theme. The case study module generates and outputs case studies when the page template is requested. it also outputs css data containers used by <strong>script.js</strong> to custom-color elements such as svg fill colors, and css background colors to match the color theme of the case study. This project was designed by <a href="http://oatemeal.co">John</a> but built from scratch with love by <a href="http://jhutchcraft.com">me.</a></p>
+
+		<h4>Files included:</h4>
+
+		<ul>
+			<li>
+				<strong>case_study_module.php</strong> - this file is the class i used primarily to organize the serverside code that would be used for the case studies.
+			</li>
+			<li>
+				<strong>script.js</strong> - this is the javascript that I used to custom color elements in the case study template. It reads css data containers created by the case study module, ie:
+				<pre>&lt;i class="hex-box" id="socials-color" data-hex="&lt;?php echo $this-&gt;get_hex_bgc(); ?&gt;"&gt;&lt;/i&gt;</pre>
+				... and then colors elements with special triggers on them
+			</li>
+			<li>
+				<strong>case_study_admin.png</strong> - this is a screenshot of the back end of the case study page template. I used <a href="http://advancedcustomfields.com" target="_blank">Advanced Custom Fields</a> to create the custom fields in the admin page.
+			</li>
+			<li>
+				<strong>page_template.php</strong> - this is the page template i used to render case studies. It uses the loop to get a post id, then passes the post ID into an instance of the case study module, then renders the project.
+			</li>
+		</ul>
+
+
+	</div>
+
+
+</body>
+</html>
